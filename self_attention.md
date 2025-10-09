@@ -940,26 +940,3 @@ Calculate dimensions for:
 4. Complete Self-Attention:
    Attention(Q, K, V) = softmax(Q × Kᵀ) × V
 ```
-
-### Personal Notes:
-- 
-- 
-- 
-
-### Questions to Explore:
-- 
-- 
-- 
-
----
-
-**Document Information:**
-- Created: October 2025
-- Format: Markdown
-- Topic: Self-Attention Mechanism in Transformers
-- Level: Intermediate
-- Prerequisites: Basic understanding of neural networks, linear algebra, matrix multiplication
-
----
-
-*Congratulations on completing this tutorial! You now understand the heart of Transformers. Self-attention is what makes modern AI so powerful, and you've built it from scratch. Continue to the next tutorials to complete your Transformer journey!*
