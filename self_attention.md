@@ -152,7 +152,7 @@ apple' = 0.1 × love + 0.5 × apple + 0.4 × juice
 
 We need to create new representations for **every word**, not just "Apple".
 
-<img width="31" height="13" alt="image" src="all_words_1.png" />
+<img width="31" height="13" alt="image" src="https://github.com/siddiquiduet/transformer/blob/main/all_words_1.png" />
 
 
 **For "love":**
