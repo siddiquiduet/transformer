@@ -288,6 +288,7 @@ All positive ✓
 - Model cannot learn which similarities are relevant
 
 **Example problem:**
+<img width="750" height="461" alt="learnable_param_1" src="https://github.com/user-attachments/assets/5c8e9d5f-da23-4e12-816c-262b8ba37c4a" />
 
 Consider a chatbot for an electronics store:
 - Customer says: "I love Apple watch"
@@ -360,6 +361,10 @@ These are NOT equal! ✓
 ### The Three Transformations
 
 From each word embedding, we create **three different vectors**:
+<img width="887" height="164" alt="qkv_1" src="https://github.com/user-attachments/assets/1415a7ff-542a-4590-a0b4-a67e0025eb5e" />
+
+<img width="960" height="268" alt="qkv_2" src="https://github.com/user-attachments/assets/7b3ae2ce-4f45-432c-93fd-570ef4b95d45" />
+
 
 ```
 E(Apple) → multiply by W_Q → Q(Apple)  [Query]
@@ -630,6 +635,7 @@ Time: O(1) regardless of sequence length
        ↓                 ↓                 ↓
    Thread 1          Thread 2          Thread 3
 ```
+<img width="718" height="207" alt="parallel_1" src="https://github.com/user-attachments/assets/5b3380c2-310a-493f-887f-3d909a9c3393" />
 
 All three calculations are **completely independent**!
 
@@ -644,6 +650,8 @@ gradually fades        is strongest
 ```
 
 **Self-Attention Solution:**
+<img width="864" height="444" alt="long_range_dependencies" src="https://github.com/user-attachments/assets/6c42fe2c-8dfb-4d3b-b655-9847921db1da" />
+
 ```
 Every word directly connected to every other word
 No matter how far apart they are!
