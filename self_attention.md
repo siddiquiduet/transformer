@@ -155,17 +155,12 @@ We need to create new representations for **every word**, not just "Apple".
 <img width="863" height="420" alt="allwords_1" src="https://github.com/user-attachments/assets/490ebada-2133-4ded-ad31-0c547a7ad04a" />
 
 
-**For "love":**
+**For "love apple phones":**
 ```
 love' = 0.8 × love + 0.1 × Apple + 0.1 × phones
 ```
 
-**For "phones":**
-```
-phones' = 0.1 × love + 0.4 × Apple + 0.5 × phones
-```
-
-**For "juice":**
+**For "love apple juice":**
 ```
 juice' = 0.1 × love + 0.4 × apple + 0.5 × juice
 ```
