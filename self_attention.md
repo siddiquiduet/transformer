@@ -183,23 +183,7 @@ These numbers represent the **relationship** or **similarity** between words:
 ### Similarity Through Distance
 
 In word embedding space, words are positioned based on their meaning:
-
-```
-                  phones (2, 2)
-                     ●
-                    /
-                   /
-                  /
-        Apple (2, 2)
-            ●
-           / \
-          /   \
-         /     \
-        /       \
-   love         juice
-(-4, 3)        (4, 0)
-    ●            ●
-```
+<img width="714" height="416" alt="similarity_1" src="https://github.com/user-attachments/assets/a04c7ceb-8a5b-49bf-a69a-725d311b08c4" />
 
 **Key principle of word embeddings:**
 - **Closer words** = More related/similar
