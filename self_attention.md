@@ -152,6 +152,9 @@ apple' = 0.1 × love + 0.5 × apple + 0.4 × juice
 
 We need to create new representations for **every word**, not just "Apple".
 
+<img width="31" height="13" alt="image" src="https://github.com/user-attachments/assets/aaedc90a-fef6-4852-97ab-366c6edd9891" />
+
+
 **For "love":**
 ```
 love' = 0.8 × love + 0.1 × Apple + 0.1 × phones
