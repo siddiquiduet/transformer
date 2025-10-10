@@ -495,6 +495,9 @@ Get phones'
 
 Let's see the complete calculation with actual matrices.
 
+<img width="1432" height="791" alt="attention_all" src="https://github.com/user-attachments/assets/8aa233d1-8c46-4216-9dea-4331913cef5b" />
+
+
 #### Initial Setup
 
 **Word embeddings matrix:**
@@ -523,6 +526,13 @@ Q = [Q(love)  ]     K = [K(love)  ]     V = [V(love)  ]
     [Q(Apple) ]         [K(Apple) ]         [V(Apple) ]
     [Q(phones)]         [K(phones)]         [V(phones)]
 ```
+
+<img width="610" height="485" alt="linear_transformation" src="https://github.com/user-attachments/assets/da0ff711-025c-4e79-a7ae-c064ae8e6e76" />
+
+<img width="943" height="461" alt="linear_transformation_2" src="https://github.com/user-attachments/assets/e8d8576b-bcd2-49b9-98de-6fc485ff02a6" />
+
+<img width="955" height="523" alt="linear_transformation_3" src="https://github.com/user-attachments/assets/222227ef-dd1b-44ee-88a7-cd4711643ed1" />
+
 
 #### Step 2: Calculate Attention Scores
 
