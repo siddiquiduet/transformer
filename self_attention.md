@@ -66,9 +66,9 @@ Word embeddings are **fixed numerical vectors** that represent words. Each dimen
 
 **Example: Word embedding for "Apple"**
 ```
-Apple = [0.5, 0.8, 0.3, 0.9, 0.2, ..., 0.6]
-         ↑    ↑    ↑    ↑    ↑        ↑
-       Tech  Fruit Food  Smart Natural  ...
+Apple = [0.5,          0.8,          0.3,          0.9,          0.2, ...,          0.6]
+         ↑              ↑             ↑             ↑             ↑                  ↑
+         Tech           Fruit        Food          Smart         Natural  ...,      Sweet
 ```
 
 ### The Static Problem
