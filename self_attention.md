@@ -1,4 +1,5 @@
 # Self-Attention in Transformers: A Complete Guide
+Source: https://youtube.com/playlist?list=PLuhqtP7jdD8CQTxwVsuiFYGvHtFpNhlR3&si=tYc9HS9GA4WeewWD
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -837,38 +838,6 @@ love', Apple', phones'
 | **Word representation** | Static | Dynamic |
 | **GPU utilization** | Single GPU | Multiple GPUs |
 | **Sequence length** | Limited | Unlimited |
-
----
-
-## What's Next?
-
-In upcoming tutorials, we will cover:
-
-1. **Multi-Head Attention**
-   - Multiple attention mechanisms in parallel
-   - Capturing different types of relationships
-   - Why 8 heads are commonly used
-
-2. **Positional Encoding**
-   - Adding sequence order information
-   - Sine and cosine functions
-   - Why position matters
-
-3. **Scaled Dot-Product Attention**
-   - The division by √d_k
-   - Preventing gradient problems
-   - Numerical stability
-
-4. **Transformer Architecture**
-   - Encoder and Decoder stacks
-   - Feed-forward networks
-   - Layer normalization
-   - Residual connections
-
-5. **Training and Applications**
-   - Pre-training strategies
-   - Fine-tuning techniques
-   - Real-world implementations
 
 ---
 
