@@ -248,6 +248,8 @@ Output: [0.0, 0.5, 0.5] ✓
 Sum = 1.0 ✓
 All positive ✓
 ```
+<img width="962" height="339" alt="softmax" src="https://github.com/user-attachments/assets/9db07fad-e38e-4e50-925f-d8862ee73672" />
+
 
 ### Complete Process
 
