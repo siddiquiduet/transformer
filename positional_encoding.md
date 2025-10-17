@@ -1,5 +1,5 @@
 # Positional Encoding in Transformers: A Complete Guide
-Source: https://www.youtube.com/watch?v=LBsyiaEki_8&list=PLuhqtP7jdD8CQTxwVsuiFYGvHtFpNhlR3&index=8
+Source: https://youtu.be/LBsyiaEki_8?si=Swy-rmsM46HDouew
 
 ## Table of Contents
 1. [Introduction](#introduction)
