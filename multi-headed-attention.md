@@ -1,5 +1,5 @@
 # Multi-Head Attention in Transformers: A Concise Guide
-Source: https://www.youtube.com/watch?v=LBsyiaEki_8&list=PLuhqtP7jdD8CQTxwVsuiFYGvHtFpNhlR3&index=8
+Source: https://youtu.be/EX37E1AczjQ?si=aXaTrkNv6AsNnwjV
 
 ## 1. Introduction
 
