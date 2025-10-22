@@ -349,6 +349,7 @@ PE(pos, 2i+1) = cos(pos / 10000^(2i/d_model))
 
 Combined input = Word Embedding + Positional Encoding
 ```
+<img width="367" height="514" alt="image" src="https://github.com/user-attachments/assets/c89276a7-900d-4c0c-9837-21f366457b93" />
 
 ---
 
