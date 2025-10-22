@@ -1,5 +1,5 @@
 # Layer Normalization in Transformers: A Concise Tutorial
-
+Source: https://youtu.be/W9g7j22MO-Q?si=skHsewXJ60kNL3I6
 ## Why Normalization Matters
 
 Training deep Transformers with billions of parameters faces critical challenges: vanishing/exploding gradients and unstable optimization. **Layer Normalization** solves these problems.
@@ -37,9 +37,9 @@ Result: Circular cost function → faster, stable training.
 
 
 ## Internal Covariate Shift: The Deep Network Challenge
+<img width="515" height="84" alt="image" src="https://github.com/user-attachments/assets/32ab0c4a-3018-489b-aaec-05014c02ac0a" />
 
 Normalizing only input isn't enough. In deep networks:
-
 1. Weights update during backpropagation
 2. Each layer's output distribution changes
 3. Next layers receive a "moving target" every iteration
