@@ -107,6 +107,7 @@ Position 1: [sin(1), cos(1)] = [0.841, 0.540]
 Position 2: [sin(2), cos(2)] = [0.909, -0.416]
 Position 3: [sin(3), cos(3)] = [0.141, -0.990]
 ```
+<img width="334" height="194" alt="image" src="https://github.com/user-attachments/assets/a34c55ba-3b54-483c-a44c-561a5d352ee6" />
 
 **Better:** Reduced likelihood of duplicates
 **Problem:** Still periodic for very long sentences ✗
@@ -197,6 +198,7 @@ Positions     Dimensions →
 Pattern: Smooth gradual changes ✓
          Predictable structure ✓
 ```
+<img width="330" height="280" alt="image" src="https://github.com/user-attachments/assets/22c37f0a-06f2-40fc-8ec9-d4728ac6d080" />
 
 ### Key Properties
 
@@ -281,6 +283,7 @@ After addition:
 ↑
 Pattern still distinguishable!
 ```
+<img width="604" height="243" alt="image" src="https://github.com/user-attachments/assets/f3c6f4fc-e107-47cd-abd7-0833aab7518d" />
 
 **Experimental Proof:**
 ```
@@ -294,6 +297,7 @@ Clusters shift but remain intact ✓
 
 Semantic structure preserved!
 ```
+<img width="578" height="268" alt="image" src="https://github.com/user-attachments/assets/c91cdf19-8167-4b57-b5b1-23d5cf6ebf5e" />
 
 **Why it works:**
 - Sinusoidal waves have **regular, periodic structure**
