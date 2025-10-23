@@ -124,12 +124,6 @@ Position encoding = 512 dimensions from 256 pairs:
  ...
  sin(pos/10000), cos(pos/10000)] ← Very low (pair 256)
 ```
-
-**Why different frequencies?**
-- High frequency: Captures fine-grained nearby positions
-- Low frequency: Captures coarse-grained distant positions
-- Combined: Unique encodings for millions of positions! ✓
-
 ---
 
 ## Mathematical Formulation
@@ -151,6 +145,17 @@ where:
 ```
 
 ### Example Calculation
+**Position 0 encoding (first few dimensions):**
+PE[0, even_indices] = sin(0 / 10000^(...)) = sin(0) = 0
+PE[0, odd_indices]  = cos(0 / 10000^(...)) = cos(0) = 1
+```
+**Position 0 is special** because:
+- `sin(0) = 0` for ANY frequency
+- `cos(0) = 1` for ANY frequency
+
+So the positional encoding for the **first token** in any sequence is always:
+```
+[0, 1, 0, 1, 0, 1, 0, 1, ..., 0, 1]
 
 **Position 1 encoding (first few dimensions):**
 ```
@@ -184,23 +189,30 @@ i=1: PE(2,2) = sin(2/2.5) = 0.717
 ### Visualization
 
 **Heat map of 100 positions × 128 dimensions:**
-```
-Positions     Dimensions →
-  ↓     Low Freq ←——————————→ High Freq
-  1     [████░░░░░░░░░░░░░░░░░░░░░░]
-  2     [███░░░░░░░░░░░░░░░░░░░░░░░]
-  3     [██░░░░░░░░░░░░░░░░░░░░░░░░]
-  ...   
- 50     [░░░░░███░░░░░░░░░░░░░░░░░░]
-  ...
-100     [░░░░░░░░░░░███░░░░░░░░░░░░]
 
-Pattern: Smooth gradual changes ✓
-         Predictable structure ✓
-```
 <img width="330" height="280" alt="image" src="https://github.com/user-attachments/assets/22c37f0a-06f2-40fc-8ec9-d4728ac6d080" />
 
-### Key Properties
+### Key Observations
+1. **Vertical Stripes (Right Side):**
+   - Higher embedding dimensions (60-128) show rapid oscillations
+   - These dimensions use **high-frequency** sin/cos waves
+   - They change quickly from position to position
+   - Good for capturing **fine-grained** positional differences
+
+2. **Diagonal Patterns (Left Side):**
+   - Lower embedding dimensions (0-40) show slower, wave-like patterns
+   - These use **low-frequency** sin/cos waves
+   - They change gradually across positions
+   - Good for capturing **coarse-grained** positional relationships
+
+3. **Unique Patterns per Position:**
+   - Each row (position) has a unique color pattern
+   - This uniqueness allows the model to distinguish between positions
+
+In brief, Why different frequencies? 
+- High frequency: Captures fine-grained nearby positions
+- Low frequency: Captures coarse-grained distant positions
+- Combined: Unique encodings for millions of positions!
 
 **1. Nearby positions are similar:**
 ```
