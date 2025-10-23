@@ -146,16 +146,17 @@ where:
 
 ### Example Calculation
 **Position 0 encoding (first few dimensions):**
+```
 PE[0, even_indices] = sin(0 / 10000^(...)) = sin(0) = 0
 PE[0, odd_indices]  = cos(0 / 10000^(...)) = cos(0) = 1
-```
 **Position 0 is special** because:
 - `sin(0) = 0` for ANY frequency
 - `cos(0) = 1` for ANY frequency
 
 So the positional encoding for the **first token** in any sequence is always:
-```
 [0, 1, 0, 1, 0, 1, 0, 1, ..., 0, 1]
+```
+
 
 **Position 1 encoding (first few dimensions):**
 ```
