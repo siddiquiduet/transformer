@@ -95,12 +95,26 @@ Output = LayerNorm(Input + MultiHeadAttention(Input))
 The input Z₀ is added element-wise to the multi-head attention output Z₀'. This requires matching dimensions (both 512-dimensional).
 
 ### Layer Normalization (The "Norm" Part)
+<img width="1159" height="647" alt="image" src="https://github.com/user-attachments/assets/a5826350-51f5-4254-977c-5faea8385492" />
 
 Normalization stabilizes training by:
 - Preventing vanishing gradients (gradients becoming too small)
 - Preventing exploding gradients (gradients becoming too large)
 - Ensuring faster convergence
 
+<img width="914" height="508" alt="image" src="https://github.com/user-attachments/assets/8173dbec-6789-4668-a3c3-2ab1323b9857" />
+
+```
+LayerNorm(x) = γ · (x - μ) / √(σ² + ε) + β
+
+where:
+  μ = mean of features
+  σ² = variance of features
+  γ, β = learned parameters (scale and shift)
+
+Note:
+  if γ == σ and β == μ then LayerNorm(x) = x !!
+```
 Add & Norm layers appear after **every major component** in the encoder (after multi-head attention and after feed-forward networks).
 
 ## 5. Feed-Forward Network: Introducing Non-Linearity
@@ -127,24 +141,20 @@ The feed-forward network consists of two dense layers with ReLU activation:
 
 **Structure**:
 1. **Expansion layer**: 512 → 2048 dimensions (4× expansion)
-   - Increases model capacity to learn complex patterns
-   - Like widening the model's perspective
+   The expansion to 2048 neurons allows the model to:
+    - Increases model capacity to learn more complex patterns
+    - Like widening the model's perspective
+    - Learn hierarchical feature representations
+    - Achieve better performance (removing FFN layers significantly degrades accuracy)
+    
    
-2. **Compression layer**: 2048 → 512 dimensions  
+3. **Compression layer**: 2048 → 512 dimensions  
    - Returns to original dimensionality for residual connections
 
 **Mathematical representation**:
 ```
 FFN(x) = ReLU(xW₁ + b₁)W₂ + b₂
 ```
-
-### Why 2048 Dimensions?
-
-The expansion to 2048 neurons allows the model to:
-- Capture richer, more nuanced patterns
-- Learn hierarchical feature representations
-- Achieve better performance (removing FFN layers significantly degrades accuracy)
-
 **Parameter distribution**: Feed-forward networks contain approximately **2 million parameters** versus 1 million in multi-head attention.
 
 ## 6. Stacking Encoder Blocks
@@ -266,16 +276,7 @@ Attention(Q, K, V) = softmax(QK^T / √d_k)V
 FFN(x) = max(0, xW₁ + b₁)W₂ + b₂
 ```
 
-### Layer Normalization
 
-```
-LayerNorm(x) = γ · (x - μ) / √(σ² + ε) + β
-
-where:
-  μ = mean of features
-  σ² = variance of features
-  γ, β = learned parameters
-```
 
 ## Advantages of Encoder Architecture
 
