@@ -55,6 +55,7 @@ One attention mechanism can capture one type of relationship pattern. For the se
 A single attention head cannot effectively model both simultaneously.
 
 ### Multi-Head Architecture
+<img width="872" height="496" alt="multi-headed-attention" src="https://github.com/user-attachments/assets/47b7d4ba-147f-41c9-94a2-413819f0caca" />
 
 The original Transformer uses **8 parallel attention heads**:
 
