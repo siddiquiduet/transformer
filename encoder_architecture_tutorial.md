@@ -148,7 +148,7 @@ The expansion to 2048 neurons allows the model to:
 **Parameter distribution**: Feed-forward networks contain approximately **2 million parameters** versus 1 million in multi-head attention.
 
 ## 6. Stacking Encoder Blocks
-<img width="974" height="297" alt="stacked_header" src="https://github.com/user-attachments/assets/03235299-f4e5-4ddc-aa4c-7e488cb505d4" />
+<img width="974" height="297" alt="stacked_header" src="https://github.com/user-attachments/assets/fa71d8c0-54d5-4136-bc49-55d545c4d257" />
 
 ### The Deep Architecture
 
