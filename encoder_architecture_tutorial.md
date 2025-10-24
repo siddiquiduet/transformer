@@ -70,6 +70,14 @@ The original Transformer uses **8 parallel attention heads**:
 - **Concatenation**: Eight 64-dimensional outputs concatenate to 512 dimensions (8 × 64 = 512)
 - **Linear transformation**: A weight matrix W^o (512 × 512) projects concatenated outputs
 
+- **Math**
+```
+MultiHead(Q, K, V) = Concat(head₁, head₂, ..., head₈)W^O
+where head_i = Attention(QW^Q_i, KW^K_i, VW^V_i)
+Attention(Q, K, V) = softmax(QK^T / √d_k)V
+```
+
+
 ### Parallel Processing Advantage
 
 All words are processed simultaneously, enabling:
@@ -257,25 +265,6 @@ Output (3 × 512)
 | d_ff | 2048 | Inner dimension of FFN |
 | N | 6 | Number of encoder blocks |
 | dropout | 0.1 | Dropout rate applied throughout |
-
-## Mathematical Formulations
-
-### Multi-Head Attention
-
-```
-MultiHead(Q, K, V) = Concat(head₁, head₂, ..., head₈)W^O
-
-where head_i = Attention(QW^Q_i, KW^K_i, VW^V_i)
-
-Attention(Q, K, V) = softmax(QK^T / √d_k)V
-```
-
-### Feed-Forward Network
-
-```
-FFN(x) = max(0, xW₁ + b₁)W₂ + b₂
-```
-
 
 
 ## Advantages of Encoder Architecture
