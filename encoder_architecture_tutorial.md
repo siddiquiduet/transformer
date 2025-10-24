@@ -78,8 +78,10 @@ All words are processed simultaneously, enabling:
 - Dramatically faster training than sequential models (RNNs, LSTMs)
 
 ## 4. Add & Norm Layer: Stabilizing Deep Networks
+<img width="791" height="450" alt="add_n_norm" src="https://github.com/user-attachments/assets/bbfeea5b-33a4-458a-a2ec-47cf9d55673d" />
 
 ### Residual Connections (The "Add" Part)
+<img width="859" height="319" alt="residual_connection" src="https://github.com/user-attachments/assets/f267aabe-4db7-43ed-82f8-f1bd77ca4b26" />
 
 Deep networks face a critical problem: as inputs pass through many layers with random initial weights, information becomes distorted into noise by the final layer.
 
@@ -102,6 +104,7 @@ Normalization stabilizes training by:
 Add & Norm layers appear after **every major component** in the encoder (after multi-head attention and after feed-forward networks).
 
 ## 5. Feed-Forward Network: Introducing Non-Linearity
+<img width="874" height="501" alt="feed_forward" src="https://github.com/user-attachments/assets/a17a81b0-dc7c-4a5d-830a-da4cb75e0556" />
 
 ### The Non-Linearity Problem
 
@@ -145,6 +148,7 @@ The expansion to 2048 neurons allows the model to:
 **Parameter distribution**: Feed-forward networks contain approximately **2 million parameters** versus 1 million in multi-head attention.
 
 ## 6. Stacking Encoder Blocks
+<img width="974" height="297" alt="stacked_header" src="https://github.com/user-attachments/assets/03235299-f4e5-4ddc-aa4c-7e488cb505d4" />
 
 ### The Deep Architecture
 
