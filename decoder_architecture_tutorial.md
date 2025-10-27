@@ -1,6 +1,9 @@
 # Decoder Architecture in Transformers: A Comprehensive Tutorial
 Suurce: https://youtu.be/DFqWPwF0OH0?si=luQ3WN4H6Xh3LSpa
 
+<img width="931" height="237" alt="image" src="https://github.com/user-attachments/assets/ddeffe39-6399-4ab3-9f58-19f19a5cb08b" />
+
+
 ## Introduction
 
 The Transformer decoder is the generative component that produces output sequences. Understanding its architecture reveals how models like GPT generate coherent text and how translation models convert between languages. This tutorial systematically explores each decoder component with special emphasis on masked multi-head attention and cross attention, using **English to Bangla translation** as our primary example.
@@ -129,7 +132,7 @@ This is **data leakage**: the model accesses information during training that wo
 #### Mathematical Implementation
 
 *The original self-attention:*
-<img width="960" height="480" alt="image" src="https://github.com/user-attachments/assets/e658fa0b-0b17-421f-96ec-76879d704561" />
+<img width="960" height="480" alt="image" src="https://github.com/user-attachments/assets/87ba5044-a1b9-4602-b8a9-ede30ec45381" />
 
 **Step 1**: Calculate attention scores (before softmax)
 ```
@@ -414,6 +417,9 @@ Cross attention learns these complex mappings automatically!
 
 ### How Cross Attention Differs from Self-Attention
 
+<img width="923" height="466" alt="image" src="https://github.com/user-attachments/assets/ebacdf23-8ff9-4d28-88c3-9418afb4c30b" />
+
+
 | Component | Self-Attention | Cross Attention |
 |-----------|----------------|-----------------|
 | Query (Q) | From same input | From **decoder** (Bangla words) |
@@ -447,9 +453,9 @@ Result Matrix:
              "I"    "like"  "pizza"
 <START>    [ s₁₁     s₁₂     s₁₃  ]
 আমি        [ s₂₁     s₂₂     s₂₃  ]
-পিজ্জা     [ s₃₁     s₃₂     s৩৩  ]
-পছন্দ      [ s₄₁     s₄₂     s৪৩  ]
-করি        [ s₅₁     s₅₂     s৫৩  ]
+পিজ্জা       [ s₃₁     s₃₂     s₃₃  ]
+পছন্দ        [ s₄₁     s₄₂     s₄₃  ]
+করি         [ s₅₁     s₅₂     s₅₃  ]
 ```
 
 Each score represents similarity between a Bangla word and an English word.
@@ -468,6 +474,8 @@ Example Attention Weights:
 ```
 
 **Step 4**: Generate new contextual embeddings
+
+<img width="924" height="435" alt="image" src="https://github.com/user-attachments/assets/d786ecbc-c261-4ac6-962d-117e14959f04" />
 ```
 Output = Attention_Weights × V
 
