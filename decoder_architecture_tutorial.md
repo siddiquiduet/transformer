@@ -128,6 +128,9 @@ This is **data leakage**: the model accesses information during training that wo
 
 #### Mathematical Implementation
 
+*The original self-attention:*
+<img width="960" height="480" alt="image" src="https://github.com/user-attachments/assets/e658fa0b-0b17-421f-96ec-76879d704561" />
+
 **Step 1**: Calculate attention scores (before softmax)
 ```
 Input: <START>, আমি, পিজ্জা, পছন্দ, করি (5 × 512)
@@ -137,6 +140,11 @@ Attention Scores = Q × K^T / √d_k  → 5 × 5 matrix
 ```
 
 **Step 2**: Apply the mask
+
+*The modification (masked attention) over self-attention:*
+<img width="960" height="480" alt="image" src="https://github.com/user-attachments/assets/dd8a92a3-159b-4134-b3d1-24d27238a605" />
+
+
 ```
 Mask Matrix (added before softmax):
               <START>  আমি   পিজ্জা  পছন্দ  করি
