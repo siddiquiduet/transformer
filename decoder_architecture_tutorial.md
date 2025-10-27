@@ -39,8 +39,8 @@ In RNN-based encoder-decoder models:
 ### Key Differences from RNNs
 
 **Encoder Side**: Processes **all input words in parallel**
-- Input: "I love Apple phones" (all at once)
-- Output: 4 contextual vectors (one per word, all 512-dimensional)
+- Input: "I like pizza" (all at once)
+- Output: 3 contextual vectors (one per word, all 512-dimensional)
 
 **Decoder Side**: Still works sequentially during **inference**
 
